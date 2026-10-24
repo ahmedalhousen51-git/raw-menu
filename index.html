@@ -115,19 +115,19 @@ footer img{width:44px;margin:0 auto 10px;opacity:.85}
 var SIZES = ["Regular", "Large"];
 var MENU = [
   { id: "hot", name: "Hot Coffee", sized: true, items: [
-    ["Espresso", 60], ["Americano", [60, 80]], ["Macchiato", 65], ["Caramel Macchiato", [85, 100]],
-    ["Cappuccino", [70, 85]], ["Latte", [70, 85]], ["Spanish Latte", [85, 100]], ["Pistachio Spanish Latte", [100, 115]],
-    ["Salted Caramel Latte", [85, 100]], ["Toffee Nut Latte", [85, 100]], ["Popcorn Latte", [85, 100]], ["Cinnamon Latte", [85, 100]],
-    ["Flat White", 85], ["Cortado", 80], ["Dark Chocolate Mocha", [85, 100]], ["White Chocolate Mocha", [85, 100]] ] },
+    ["Espresso", 75], ["Americano", [75, 95]], ["Macchiato", 80], ["Caramel Macchiato", [100, 115]],
+    ["Cappuccino", [85, 100]], ["Latte", [85, 100]], ["Spanish Latte", [100, 115]], ["Pistachio Spanish Latte", [115, 130]],
+    ["Salted Caramel Latte", [100, 115]], ["Toffee Nut Latte", [100, 115]], ["Popcorn Latte", [100, 115]], ["Cinnamon Latte", [100, 115]],
+    ["Flat White", 100], ["Cortado", 95], ["Dark Chocolate Mocha", [100, 115]], ["White Chocolate Mocha", [100, 115]] ] },
   { id: "iced", name: "Iced Coffee", items: [
-    ["Iced Latte", 85], ["Iced Spanish Latte", 100], ["Iced Pistachio Spanish Latte", 130], ["Iced Flat White", 100],
-    ["Iced Americano", 90], ["Iced Salted Caramel Latte", 100], ["Iced Toffee Nut Latte", 100], ["Iced Cinnamon Latte", 100],
-    ["Iced Popcorn Latte", 100], ["Iced Caramel Macchiato", 100], ["Iced Mocha", 100], ["Iced White Mocha", 100],
-    ["Iced Tea", 90], ["Iced Hibiscus", 110], ["Red Bull", 100] ] },
+    ["Iced Latte", 100], ["Iced Spanish Latte", 115], ["Iced Pistachio Spanish Latte", 145], ["Iced Flat White", 115],
+    ["Iced Americano", 105], ["Iced Salted Caramel Latte", 115], ["Iced Toffee Nut Latte", 115], ["Iced Cinnamon Latte", 115],
+    ["Iced Popcorn Latte", 115], ["Iced Caramel Macchiato", 115], ["Iced Mocha", 115], ["Iced White Mocha", 115],
+    ["Iced Tea", 105], ["Iced Hibiscus", 125], ["Red Bull", 115] ] },
   { id: "blended", name: "Blended Coffee", items: [
-    ["Espresso", 85], ["Caramel", 100], ["Salted Caramel", 100], ["Toffee Nut", 110], ["Mocha", 100], ["White Mocha", 100] ] },
+    ["Espresso", 100], ["Caramel", 115], ["Salted Caramel", 115], ["Toffee Nut", 125], ["Mocha", 115], ["White Mocha", 115] ] },
   { id: "blended-nc", name: "Blended Non-Coffee", items: [
-    ["Salted Caramel", 90], ["Peanut Butter", 100], ["Cookies Nutella", 110], ["White Chocolate Strawberry", 100] ] },
+    ["Salted Caramel", 105], ["Peanut Butter", 115], ["Cookies Nutella", 125], ["White Chocolate Strawberry", 115] ] },
   { id: "boba", name: "Boba", items: [
     ["Boba Milk Tea", 115], ["Boba Brown Sugar", 115], ["Boba Caramel", 115, "Original or salted"], ["Boba Coffee", 120],
     ["Boba Spanish Latte", 130], ["Boba Matcha", 130], ["Boba Taro", 150], ["Boba Salted Caramel Peanut Butter", 130],
@@ -136,21 +136,21 @@ var MENU = [
     ["Boba Coconut", 135], ["Boba Colada", 135], ["Boba Mango Coconut", 130], ["Boba Mango Peach", 130],
     ["Boba Strawberry Coconut", 130], ["Boba Coconut Cacao", 130] ] },
   { id: "matcha", name: "Matcha", items: [
-    ["Hot Matcha Latte", 100], ["Iced Matcha Classic", 100], ["Iced Matcha Vanilla", 115], ["Iced Matcha Salted Caramel", 115],
-    ["Iced Matcha White Chocolate", 115], ["Iced Matcha Strawberry", 125], ["Iced Matcha Raspberry", 125], ["Iced Matcha Coconut", 125],
-    ["Iced Matcha Mango", 125], ["Iced Matcha Lavender", 115], ["Blended Matcha", 110] ] },
+    ["Hot Matcha Latte", 115], ["Iced Matcha Classic", 115], ["Iced Matcha Vanilla", 130], ["Iced Matcha Salted Caramel", 130],
+    ["Iced Matcha White Chocolate", 130], ["Iced Matcha Strawberry", 140], ["Iced Matcha Raspberry", 140], ["Iced Matcha Coconut", 140],
+    ["Iced Matcha Mango", 140], ["Iced Matcha Lavender", 130], ["Blended Matcha", 125] ] },
   { id: "milkshake", name: "Milkshake", items: [
-    ["Vanilla", 90], ["Chocolate", 90], ["Caramel", 90], ["Salted Caramel", 110], ["Taro", 120], ["Matcha", 120],
-    ["Strawberry", 100], ["Blueberry", 100], ["Coconut", 100], ["Oreo", 100], ["Nutella", 110], ["Lotus", 110],
-    ["Pistachio", 110], ["Kinder", 110] ] },
+    ["Vanilla", 105], ["Chocolate", 105], ["Caramel", 105], ["Salted Caramel", 125], ["Taro", 135], ["Matcha", 135],
+    ["Strawberry", 115], ["Blueberry", 115], ["Coconut", 115], ["Oreo", 115], ["Nutella", 125], ["Lotus", 125],
+    ["Pistachio", 125], ["Kinder", 125] ] },
   { id: "smoothies", name: "Smoothies", items: [
-    ["Blueberry", 80], ["Strawberry", 80], ["Mango Peach", 85], ["Mango Passion", 85], ["Orange Passion", 85],
-    ["Coconut Strawberry", 85], ["Sour Kiwi", 85] ] },
+    ["Blueberry", 95], ["Strawberry", 95], ["Mango Peach", 100], ["Mango Passion", 100], ["Orange Passion", 100],
+    ["Coconut Strawberry", 100], ["Sour Kiwi", 100] ] },
   { id: "mojito", name: "Mojito", items: [
-    ["Mojito", 75, null, ["Strawberry", "Blueberry", "Mixed Berry", "Raspberry", "Watermelon", "Peach", "Passion", "Sour Kiwi"]],
-    ["Red Bull Mojito", 110] ] },
+    ["Mojito", 90, null, ["Strawberry", "Blueberry", "Mixed Berry", "Raspberry", "Watermelon", "Peach", "Passion", "Sour Kiwi"]],
+    ["Red Bull Mojito", 125] ] },
   { id: "extra", name: "Extras", items: [
-    ["Espresso Shot", 20], ["Boba", 35], ["Flavor", 20, null, ["Vanilla", "Caramel", "Hazelnut", "Fruits"]], ["Water", 10] ] }
+    ["Espresso Shot", 35], ["Boba", 50], ["Flavor", 35, null, ["Vanilla", "Caramel", "Hazelnut", "Fruits"]], ["Water", 25] ] }
 ];
 
 var $ = function (s) { return document.querySelector(s) };
