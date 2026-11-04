@@ -114,43 +114,45 @@ footer img{width:44px;margin:0 auto 10px;opacity:.85}
 // السعرين في الأصناف اللي ليها حجمين: [صغير، كبير]
 var SIZES = ["Regular", "Large"];
 var MENU = [
-  { id: "hot", name: "Hot Coffee", sized: true, items: [
-    ["Espresso", 75], ["Americano", [75, 95]], ["Macchiato", 80], ["Caramel Macchiato", [100, 115]],
-    ["Cappuccino", [85, 100]], ["Latte", [85, 100]], ["Spanish Latte", [100, 115]], ["Pistachio Spanish Latte", [115, 130]],
-    ["Salted Caramel Latte", [100, 115]], ["Toffee Nut Latte", [100, 115]], ["Popcorn Latte", [100, 115]], ["Cinnamon Latte", [100, 115]],
-    ["Flat White", 100], ["Cortado", 95], ["Dark Chocolate Mocha", [100, 115]], ["White Chocolate Mocha", [100, 115]] ] },
+  { id: "hot", name: "Hot Coffee", items: [
+    ["Espresso", 60], ["Americano", 80], ["Macchiato", 65], ["Caramel Macchiato", 110],
+    ["Cappuccino", 110], ["Latte", 110], ["Spanish Latte", 125], ["Salted Caramel Latte", 125],
+    ["Toffee Nut Latte", 125], ["Popcorn Latte", 125], ["Flat White", 90], ["Cortado", 80],
+    ["Dark Mocha", 125], ["White Mocha", 125], ["Turkish Coffee", 50], ["French Coffee", 80] ] },
+  { id: "hot-drinks", name: "Hot Drinks", items: [
+    ["Hot Chocolate Classic", 100], ["Hot Chocolate Hazelnut", 110], ["Hot Chocolate Salted Caramel", 110],
+    ["Hot Chocolate Oreo", 110], ["Hot Chocolate Tiramisu", 120] ] },
   { id: "iced", name: "Iced Coffee", items: [
-    ["Iced Latte", 100], ["Iced Spanish Latte", 115], ["Iced Pistachio Spanish Latte", 145], ["Iced Flat White", 115],
-    ["Iced Americano", 105], ["Iced Salted Caramel Latte", 115], ["Iced Toffee Nut Latte", 115], ["Iced Cinnamon Latte", 115],
-    ["Iced Popcorn Latte", 115], ["Iced Caramel Macchiato", 115], ["Iced Mocha", 115], ["Iced White Mocha", 115],
-    ["Iced Tea", 105], ["Iced Hibiscus", 125], ["Red Bull", 115] ] },
-  { id: "blended", name: "Blended Coffee", items: [
-    ["Espresso", 100], ["Caramel", 115], ["Salted Caramel", 115], ["Toffee Nut", 125], ["Mocha", 115], ["White Mocha", 115] ] },
-  { id: "blended-nc", name: "Blended Non-Coffee", items: [
-    ["Salted Caramel", 105], ["Peanut Butter", 115], ["Cookies Nutella", 125], ["White Chocolate Strawberry", 115] ] },
+    ["Iced Latte", 110], ["Iced Spanish Latte", 125], ["Iced Americano", 80], ["Iced Salted Caramel Latte", 125],
+    ["Iced Toffee Nut Latte", 125], ["Iced Popcorn Latte", 125], ["Iced Caramel Macchiato", 110], ["Iced Dark Mocha", 125],
+    ["Iced White Mocha", 125], ["Iced Tea", 110] ] },
+  { id: "frappe", name: "Frappe", items: [
+    ["Espresso Frappe", 100], ["Frappe Caramel", 120], ["Frappe Salted Caramel", 120], ["Frappe Toffee Nut", 120],
+    ["Frappe Dark Mocha", 120], ["Frappe White Mocha", 120], ["Frappe Coconut", 120] ] },
   { id: "boba", name: "Boba", items: [
-    ["Boba Milk Tea", 115], ["Boba Brown Sugar", 115], ["Boba Caramel", 115, "Original or salted"], ["Boba Coffee", 120],
-    ["Boba Spanish Latte", 130], ["Boba Matcha", 130], ["Boba Taro", 150], ["Boba Salted Caramel Peanut Butter", 130],
-    ["Boba White Chocolate", 125], ["Boba Cookies Nutella", 135], ["Boba Oreo", 115], ["Boba Lotus", 130],
-    ["Boba Rose Litchi", 135], ["Boba Raspberry", 135], ["Boba Blueberry", 135], ["Boba Strawberry", 135],
-    ["Boba Coconut", 135], ["Boba Colada", 135], ["Boba Mango Coconut", 130], ["Boba Mango Peach", 130],
-    ["Boba Strawberry Coconut", 130], ["Boba Coconut Cacao", 130] ] },
+    ["Boba Milk Tea", 120], ["Boba Brown Sugar", 120], ["Boba Coffee", 120], ["Boba Spanish Latte", 150],
+    ["Boba Matcha", 130], ["Boba Taro", 150], ["Boba Salted Caramel Peanut Butter", 135], ["Boba White Mocha", 125],
+    ["Boba Nutella", 135], ["Boba Oreo", 115], ["Boba Lotus", 135], ["Boba Raspberry", 135],
+    ["Boba Blueberry", 135], ["Boba Strawberry", 135], ["Boba Coconut", 135], ["Boba Colada", 135],
+    ["Boba Mango Coconut", 135], ["Boba Mango Peach", 130], ["Boba Strawberry Coconut", 130], ["Boba Coconut Cacao", 130],
+    ["Boba Caramel", 130], ["Boba Salted Caramel", 130], ["Boba Vanilla", 120] ] },
   { id: "matcha", name: "Matcha", items: [
-    ["Hot Matcha Latte", 115], ["Iced Matcha Classic", 115], ["Iced Matcha Vanilla", 130], ["Iced Matcha Salted Caramel", 130],
-    ["Iced Matcha White Chocolate", 130], ["Iced Matcha Strawberry", 140], ["Iced Matcha Raspberry", 140], ["Iced Matcha Coconut", 140],
-    ["Iced Matcha Mango", 140], ["Iced Matcha Lavender", 130], ["Blended Matcha", 125] ] },
+    ["Hot Matcha Latte", 110], ["Iced Matcha Salted Caramel", 125], ["Iced Matcha Strawberry", 125], ["Iced Matcha Raspberry", 125],
+    ["Iced Matcha Coconut", 125], ["Iced Matcha Mango", 125], ["Iced Matcha Lavender", 125] ] },
   { id: "milkshake", name: "Milkshake", items: [
-    ["Vanilla", 105], ["Chocolate", 105], ["Caramel", 105], ["Salted Caramel", 125], ["Taro", 135], ["Matcha", 135],
-    ["Strawberry", 115], ["Blueberry", 115], ["Coconut", 115], ["Oreo", 115], ["Nutella", 125], ["Lotus", 125],
-    ["Pistachio", 125], ["Kinder", 125] ] },
+    ["Vanilla", 100], ["Chocolate", 110], ["Caramel", 120], ["Taro", 130], ["Matcha", 130], ["Strawberry", 120],
+    ["Blueberry", 120], ["Oreo", 120], ["Nutella", 130], ["Lotus", 130], ["Pistachio", 150], ["Kinder", 130] ] },
   { id: "smoothies", name: "Smoothies", items: [
-    ["Blueberry", 95], ["Strawberry", 95], ["Mango Peach", 100], ["Mango Passion", 100], ["Orange Passion", 100],
-    ["Coconut Strawberry", 100], ["Sour Kiwi", 100] ] },
+    ["Blueberry Coconut", 110], ["Strawberry Peach", 110], ["Mango Passion", 120], ["Kiwi Lemon Mint", 110],
+    ["Coconut Pineapple", 110] ] },
   { id: "mojito", name: "Mojito", items: [
-    ["Mojito", 90, null, ["Strawberry", "Blueberry", "Mixed Berry", "Raspberry", "Watermelon", "Peach", "Passion", "Sour Kiwi"]],
-    ["Red Bull Mojito", 125] ] },
+    ["Mojito Lemon Mint", 80], ["Mojito Strawberry", 90], ["Mojito Blueberry", 90], ["Mojito Mixed Berry", 90],
+    ["Mojito Raspberry", 90], ["Mojito Watermelon", 90], ["Mojito Peach", 90], ["Mojito Passion", 90],
+    ["Mojito Sour Kiwi", 90], ["Mojito Red Bull", 130] ] },
+  { id: "soft", name: "Soft Drinks", items: [
+    ["Red Bull", 110], ["Water", 10] ] },
   { id: "extra", name: "Extras", items: [
-    ["Espresso Shot", 35], ["Boba", 50], ["Flavor", 35, null, ["Vanilla", "Caramel", "Hazelnut", "Fruits"]], ["Water", 25] ] }
+    ["Espresso Shot", 30], ["Boba", 40], ["Flavor", 30], ["Sauce", 30] ] }
 ];
 
 var $ = function (s) { return document.querySelector(s) };
